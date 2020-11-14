@@ -7,8 +7,9 @@ class Scrapper
     raw_page = HTTParty.get(link)
     parsed_page = Nokogiri::HTML(raw_page)
   end
+
   def store
-    all_hotels = Array.new
+    all_hotels = []
     hotels = parser.css('div.slickHotelCardReworked')
     first_hotel = hotels.first
     hotels.each do |hotel|
@@ -16,10 +17,9 @@ class Scrapper
         name: hotel.css('a.hotelCard__title').text,
         price: hotel.css('span.hotelCard__price').text.split('+')[0],
         amenities: hotel.css('span.freebie__text').text,
-        booking_link: "https://www.kayak.com" + hotel.css('div.hotelCard__informationWrapper__leftSide').css('a')[0].attributes["href"].value
+        booking_link: 'https://www.kayak.com' + hotel.css('div.hotelCard__informationWrapper__leftSide').css('a')[0].attributes['href'].value
       }
-      all_hotels << each_hotel 
-       
+      all_hotels << each_hotel
     end
     # byebug
     all_hotels
