@@ -14,7 +14,7 @@ class Scrapper
     hotels.each do |hotel|
       each_hotel = {
         name: hotel.css('a.hotelCard__title').text,
-        price: hotel.css('span.hotelCard__price').text,
+        price: hotel.css('span.hotelCard__price').text.split('+')[0],
         amenities: hotel.css('span.freebie__text').text,
         booking_link: "https://www.kayak.com" + hotel.css('div.hotelCard__informationWrapper__leftSide').css('a')[0].attributes["href"].value
       }
