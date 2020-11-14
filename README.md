@@ -39,7 +39,6 @@ Open your terminal & run `rspec` & the program will run tests for two files (mai
 
 - Github: [@Nkuria](https://github.com/Nkuria)
 - Linkedin: [Nick Kuria](https://www.linkedin.com/in/nick-kuria-a148931a9/)
-- claytonsiby@gmail.com
 
 # 🤝 Contributing
 
