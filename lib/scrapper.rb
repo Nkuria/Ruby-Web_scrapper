@@ -1,7 +1,5 @@
 require 'HTTParty'
 require 'Nokogiri'
-require 'JSON'
-require 'Pry'
 require 'byebug'
 class Scrapper
   def parser
