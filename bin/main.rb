@@ -9,7 +9,34 @@ def intro
   puts "Initiating Scrap".red
   puts " "
   puts '*' * 40
-  
 end
 
+
+# puts final_hotels
+
+
+def results_display
+  scrap = Scrapper.new
+  final_hotels = scrap.store
+  final_hotels.each do |x| 
+    system('clear')
+    puts "Press any key or enter to continue".green
+    puts "press t followed by enter to stop".green
+    response = gets.chomp
+    break if response == "t"
+    puts "Hotel Name: #{x[:name]}".red
+    puts "Price per night: #{x[:price]}".yellow
+    puts "Available amenities: #{x[:amenities]}".green
+    puts "Booking URL: #{x[:booking_link]}".blue
+    puts '*' * 40
+    puts " "
+    puts '*' * 40
+  end
+end
 intro
+results_display
+    
+
+
+
+

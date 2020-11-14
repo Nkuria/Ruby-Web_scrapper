@@ -21,6 +21,7 @@ class Scrapper
       all_hotels << each_hotel 
        
     end
-    byebug
+    # byebug
+    all_hotels
   end
 end
