@@ -1,4 +1,4 @@
-require 'Nokogiri'
+require 'nokogiri'
 require 'httparty'
 class Scrapper
   def parser
