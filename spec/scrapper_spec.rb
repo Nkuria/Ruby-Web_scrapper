@@ -2,7 +2,7 @@ require 'scrapper'
 require_relative 'spec_helper.rb'
 
 describe Scrapper do
-  let(:scrape1) { Scrapper.new }
+  subject(:scrape1) { Scrapper.new }
 
   describe '#parser' do
     it 'returns the parsed version of the page' do
