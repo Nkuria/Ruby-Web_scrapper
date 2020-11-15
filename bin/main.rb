@@ -23,7 +23,7 @@ def results_display
     puts "Hotel Name: #{x[:name]}".red
     puts "Price per night: #{x[:price]}".yellow
     puts "Available amenities: #{x[:amenities]}".green
-    puts "Booking URL: #{x[:booking_link]}".blue
+    puts "Booking URL: #{x[:book]}".blue
     puts '*' * 40
     puts ' '
     puts '*' * 40
