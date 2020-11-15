@@ -1,5 +1,5 @@
 require 'scrapper'
-require_relative 'spec_helper.rb'
+require 'spec_helper.rb'
 
 describe Scrapper do
   subject(:scrape1) { Scrapper.new }
